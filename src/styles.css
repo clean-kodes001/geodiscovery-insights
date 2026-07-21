@@ -4,6 +4,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-sans: "Lato", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Amaranth", "Lato", ui-sans-serif, system-ui, sans-serif;
+  --color-brand: oklch(0.36 0.07 55);
+  --color-brand-soft: oklch(0.9 0.02 60);
+  --color-ink: oklch(0.16 0.01 60);
+  --color-ink-soft: oklch(0.42 0.01 60);
+  --color-paper: oklch(0.985 0.003 80);
+  --color-paper-2: oklch(0.965 0.006 75);
+}
+
 /*
  * Design system definition.
  *
@@ -63,14 +74,14 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --background: oklch(0.99 0.003 80);
+  --foreground: oklch(0.16 0.01 60);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.16 0.01 60);
+  --primary-foreground: oklch(0.99 0.003 80);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
@@ -140,5 +151,13 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 }
