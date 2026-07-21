@@ -1,4 +1,5 @@
 import ceo from "@/assets/uploads/ceo.jpeg";
+import west from "@/assets/uploads/west.jpeg";
 import survey1 from "@/assets/uploads/survey1.jpeg";
 import outcrop1 from "@/assets/uploads/outcrop1.jpeg";
 import outcrop2 from "@/assets/uploads/outcrop2.jpeg";
@@ -16,8 +17,8 @@ export const site = {
   description:
     "A team of geologists and applied geophysicists delivering borehole, land survey, mineral exploration and geotechnical services across the region.",
   email: "info@geodiscoverygeosciences.com",
-  phone: "+234 000 000 0000",
-  address: "Abuja, Nigeria",
+  phone: "+234 803 406 5079",
+  address: "Plot 493, Sam Tsumba Street, Off Femi Kila Street, Cadastral Zone One, Life Camp, Abuja, FCT, Nigeria",
   hours: "Mon – Fri · 9:00 – 18:00",
 };
 
@@ -36,31 +37,32 @@ export type TeamMember = {
 export const team: TeamMember[] = [
   {
     id: "jude-steven-ejepu",
-    name: "Dr. Jude Steven Ejepu",
-    role: "CEO / Founder",
+    name: "Dr. Jude Steven Ejepu, PhD",
+    role: "CEO / Founder & Associate Professor",
     photo: ceo,
-    short:
-      "Applied geophysicist with a PhD in Geology, leading exploration and integrated earth-science projects.",
+    short: "Applied geophysicist and mineral exploration specialist with over two decades of experience integrating geophysical, geochemical, and structural datasets to de-risk exploration across West Africa.",
     bio: [
-      "Dr. Jude Ejepu is a highly qualified geologist and applied geophysicist holding a PhD in Geology with significant professional experience in mineral exploration, geostatistics, and remote sensing.",
-      "His core expertise lies in the methodical integration of geological, geophysical and geochemical datasets to de-risk exploration and land-use decisions for public and private clients.",
-      "He founded GeoDiscovery Geosciences to bring rigorous, field-tested science to every borehole, survey and resource assessment the firm delivers.",
+      "Dr. Jude Ejepu is a geoscientist, applied geophysicist, and mineral exploration specialist with over two decades of combined academic and industry experience. As Founder and CEO of Geodiscovery Geosciences, he leads a consultancy delivering exploration strategies, resource evaluations, and geoscientific advisory services to clients across Nigeria, Ghana, Ethiopia, and Burkina Faso.",
+      "His work centres on the integration of geophysical, geochemical, and structural datasets to reduce exploration risk and sharpen resource targeting, with particular focus on base and precious metals in structurally controlled mineralisation environments. Project experience spans gold and lithium exploration in Central and Northern Nigeria, lead-zinc studies in the Lower Benue Trough, geothermal system characterisation, and aeromagnetic and airborne gamma ray spectrometry interpretation for mineral targeting.",
+      "In academia, Dr. Ejepu is Associate Professor in the Departments of Geology and Geophysics at the Federal University of Technology Minna (FUTMinna), where he has trained geoscientists at undergraduate, Masters, and PhD levels for more than thirteen years."
     ],
     expertise: [
-      "Mineral exploration",
-      "Geostatistics",
-      "Remote sensing & GIS",
-      "Applied geophysics",
-      "Resource estimation",
+      "Mineral exploration (Gold, Lithium, Base Metals)",
+      "Integration of geophysical, geochemical & structural datasets",
+      "Aeromagnetic & gamma-ray spectrometry interpretation",
+      "Remote sensing & GIS (ArcGIS Pro, ENVI, Sentinel, Landsat)",
+      "Geostatistics & resource evaluation (Leapfrog, Surfer)",
+      "Exploration workflow management (Oasis Montaj, MATLAB, Python)"
     ],
     education: ["PhD, Geology", "MSc, Applied Geophysics", "BSc, Geology"],
-    email: "jude@geodiscoverygeosciences.com",
+  
+    email: "jude@geodiscoverygeosciences.com"
   },
   {
     id: "adeshina-olanrewaju-jeremiah",
     name: "Adeshina Olanrewaju Jeremiah",
     role: "IT & Digital Systems Manager",
-    photo: equipment2,
+    photo: west,
     short:
       "Geoscience software engineer bridging field data, digital infrastructure and business operations.",
     bio: [
