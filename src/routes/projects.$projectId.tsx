@@ -39,7 +39,7 @@ export const Route = createFileRoute("/projects/$projectId")({
 });
 
 function ProjectDetail() {
-  const { project } = Route.useLoaderData();
+  const { project } = Route.useLoaderData() as { project: (typeof projects)[number] };
 
   return (
     <PageShell>
