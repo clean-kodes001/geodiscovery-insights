@@ -9,33 +9,22 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TeamRouteImport } from './routes/team'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ProjectsRouteImport } from './routes/projects'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as TeamMemberIdRouteImport } from './routes/team.$memberId'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ApproachRouteImport } from './routes/approach'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CopperRouteImport } from './routes/copper'
+import { Route as MediaContactsRouteImport } from './routes/media-contacts'
+import { Route as ProgrammeRouteImport } from './routes/programme'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as TeamRouteImport } from './routes/team'
 import { Route as ProjectsProjectIdRouteImport } from './routes/projects.$projectId'
+import { Route as TeamMemberIdRouteImport } from './routes/team.$memberId'
 
-const TeamRoute = TeamRouteImport.update({
-  id: '/team',
-  path: '/team',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProjectsRoute = ProjectsRouteImport.update({
-  id: '/projects',
-  path: '/projects',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -43,26 +32,65 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ApproachRoute = ApproachRouteImport.update({
+  id: '/approach',
+  path: '/approach',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TeamMemberIdRoute = TeamMemberIdRouteImport.update({
-  id: '/$memberId',
-  path: '/$memberId',
-  getParentRoute: () => TeamRoute,
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CopperRoute = CopperRouteImport.update({
+  id: '/copper',
+  path: '/copper',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MediaContactsRoute = MediaContactsRouteImport.update({
+  id: '/media-contacts',
+  path: '/media-contacts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgrammeRoute = ProgrammeRouteImport.update({
+  id: '/programme',
+  path: '/programme',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeamRoute = TeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsProjectIdRoute = ProjectsProjectIdRouteImport.update({
   id: '/$projectId',
   path: '/$projectId',
   getParentRoute: () => ProjectsRoute,
 } as any)
+const TeamMemberIdRoute = TeamMemberIdRouteImport.update({
+  id: '/$memberId',
+  path: '/$memberId',
+  getParentRoute: () => TeamRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/approach': typeof ApproachRoute
   '/contact': typeof ContactRoute
+  '/copper': typeof CopperRoute
+  '/media-contacts': typeof MediaContactsRoute
+  '/programme': typeof ProgrammeRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/team': typeof TeamRouteWithChildren
@@ -72,7 +100,11 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/approach': typeof ApproachRoute
   '/contact': typeof ContactRoute
+  '/copper': typeof CopperRoute
+  '/media-contacts': typeof MediaContactsRoute
+  '/programme': typeof ProgrammeRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/team': typeof TeamRouteWithChildren
@@ -83,7 +115,11 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/approach': typeof ApproachRoute
   '/contact': typeof ContactRoute
+  '/copper': typeof CopperRoute
+  '/media-contacts': typeof MediaContactsRoute
+  '/programme': typeof ProgrammeRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/team': typeof TeamRouteWithChildren
@@ -95,7 +131,11 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/approach'
     | '/contact'
+    | '/copper'
+    | '/media-contacts'
+    | '/programme'
     | '/projects'
     | '/sitemap.xml'
     | '/team'
@@ -105,7 +145,11 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/approach'
     | '/contact'
+    | '/copper'
+    | '/media-contacts'
+    | '/programme'
     | '/projects'
     | '/sitemap.xml'
     | '/team'
@@ -115,7 +159,11 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/approach'
     | '/contact'
+    | '/copper'
+    | '/media-contacts'
+    | '/programme'
     | '/projects'
     | '/sitemap.xml'
     | '/team'
@@ -126,7 +174,11 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ApproachRoute: typeof ApproachRoute
   ContactRoute: typeof ContactRoute
+  CopperRoute: typeof CopperRoute
+  MediaContactsRoute: typeof MediaContactsRoute
+  ProgrammeRoute: typeof ProgrammeRoute
   ProjectsRoute: typeof ProjectsRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TeamRoute: typeof TeamRouteWithChildren
@@ -134,32 +186,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/team': {
-      id: '/team'
-      path: '/team'
-      fullPath: '/team'
-      preLoaderRoute: typeof TeamRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/projects': {
-      id: '/projects'
-      path: '/projects'
-      fullPath: '/projects'
-      preLoaderRoute: typeof ProjectsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -169,19 +200,61 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/approach': {
+      id: '/approach'
+      path: '/approach'
+      fullPath: '/approach'
+      preLoaderRoute: typeof ApproachRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/team/$memberId': {
-      id: '/team/$memberId'
-      path: '/$memberId'
-      fullPath: '/team/$memberId'
-      preLoaderRoute: typeof TeamMemberIdRouteImport
-      parentRoute: typeof TeamRoute
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/copper': {
+      id: '/copper'
+      path: '/copper'
+      fullPath: '/copper'
+      preLoaderRoute: typeof CopperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/media-contacts': {
+      id: '/media-contacts'
+      path: '/media-contacts'
+      fullPath: '/media-contacts'
+      preLoaderRoute: typeof MediaContactsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programme': {
+      id: '/programme'
+      path: '/programme'
+      fullPath: '/programme'
+      preLoaderRoute: typeof ProgrammeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/team': {
+      id: '/team'
+      path: '/team'
+      fullPath: '/team'
+      preLoaderRoute: typeof TeamRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/projects/$projectId': {
       id: '/projects/$projectId'
@@ -189,6 +262,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/projects/$projectId'
       preLoaderRoute: typeof ProjectsProjectIdRouteImport
       parentRoute: typeof ProjectsRoute
+    }
+    '/team/$memberId': {
+      id: '/team/$memberId'
+      path: '/$memberId'
+      fullPath: '/team/$memberId'
+      preLoaderRoute: typeof TeamMemberIdRouteImport
+      parentRoute: typeof TeamRoute
     }
   }
 }
@@ -218,7 +298,11 @@ const TeamRouteWithChildren = TeamRoute._addFileChildren(TeamRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ApproachRoute: ApproachRoute,
   ContactRoute: ContactRoute,
+  CopperRoute: CopperRoute,
+  MediaContactsRoute: MediaContactsRoute,
+  ProgrammeRoute: ProgrammeRoute,
   ProjectsRoute: ProjectsRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TeamRoute: TeamRouteWithChildren,
@@ -226,3 +310,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

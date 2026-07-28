@@ -192,7 +192,11 @@ function Index() {
           <div className="grid grid-cols-2 gap-4">
             {team.map((m, i) => (
               <Reveal key={m.id} delay={i * 0.08}>
-                <Link to="/team/$memberId" params={{ memberId: m.id }} className="group block">
+                <Link 
+                
+                to="/team" 
+                search={{ member: m.id }}
+               className="group block">
                   <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-paper-2">
                     <motion.img
                       src={m.photo}

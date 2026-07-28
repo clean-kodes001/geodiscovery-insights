@@ -7,18 +7,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Node modules
 node_modules
 dist
 dist-ssr
-.output
-.vinxi
-.tanstack/**
-.nitro
 *.local
-
-# Wrangler / Cloudflare
-.wrangler/
-.dev.vars
 
 # Editor directories and files
 .vscode/*
@@ -30,3 +23,104 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+build
+out
+*.tsbuildinfo
+
+# Cache directories
+.cache
+.parcel-cache
+.next
+.nuxt
+.vercel
+.netlify
+
+# Coverage
+coverage
+.nyc_output
+
+# Misc
+*.pem
+*.p12
+*.pfx
+*.key
+*.cert
+*.crt
+
+# IDE specific
+*.iml
+.project
+.classpath
+.settings/
+*.code-workspace
+
+# OS specific
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# Vite specific
+vite.config.js.*
+vite.config.ts.*
+*.timestamp-*
+
+# Package manager locks (keep one)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# Docker
+docker-compose.override.yml
+*.dockerignore
+
+# Storybook
+storybook-static
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+test-results
+playwright-report
+cypress/videos
+cypress/screenshots
+
+# Secret files
+.secrets
+*.secret
+**/.secrets/
+
+# Sentry
+.sentryclirc
+
+# ESLint
+.eslintcache
+
+# Prettier
+.prettiercache
+
+# Turborepo
+.turbo
+
+# Environment specific
+.env.production
+.env.staging
+.env.development
+.env.test
